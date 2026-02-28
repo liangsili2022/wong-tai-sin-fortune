@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Application</title>
+</head>
+<body>
+    <h1>Welcome to the Fortune Application</h1>
+    <p>Your fortune for today is:</p>
+    <div id="fortune">
+        <!-- Fortune message will go here -->
+    </div>
+    <script>
+        const fortunes = [
+            "You will have a great day!",
+            "Success is in your future.",
+            "An unexpected event will bring you joy.",
+            "Take time to enjoy the little things.",
+            "A friend will bring you good luck."
+        ];
+
+        function displayFortune() {
+            const fortuneMessage = fortunes[Math.floor(Math.random() * fortunes.length)];
+            document.getElementById('fortune').innerText = fortuneMessage;
+        }
+
+        window.onload = displayFortune;
+    </script>
+</body>
+</html>
